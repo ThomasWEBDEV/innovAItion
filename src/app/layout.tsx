@@ -1,4 +1,5 @@
 import './globals.css'
+import React from 'react';
 
 export const metadata = {
   title: 'InnovAItion - Agrégateur IA',
@@ -12,6 +13,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
+      <head>
+        {/*
+          Ceci est la ligne ajoutée pour le favicon.
+          Assurez-vous d'avoir un fichier favicon.ico
+          dans votre dossier 'public/' à la racine de votre projet.
+        */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body>{children}</body>
     </html>
   )
