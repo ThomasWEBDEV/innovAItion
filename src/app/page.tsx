@@ -1,6 +1,7 @@
 'use client'
 
 import SupabaseTest from '../components/SupabaseTest'
+import SimpleTest from '@/components/SimpleTest'
 
 export default function Home() {
   return (
@@ -55,13 +56,13 @@ export default function Home() {
               }}>
                 Accueil
               </a>
-              <a href="#" style={{
+              <a href="#test" style={{
                 color: '#ffffff',
                 textDecoration: 'none',
                 transition: 'all 0.3s ease',
                 position: 'relative'
               }}>
-                Features
+                Test API
               </a>
               <a href="#" style={{
                 color: '#ffffff',
@@ -156,7 +157,7 @@ export default function Home() {
               animation: 'fadeInUp 1s ease-out 1s both',
               flexWrap: 'wrap'
             }}>
-              <button style={{
+              <a href="#test" style={{
                 padding: '1rem 2rem',
                 fontSize: '1.1rem',
                 fontWeight: '600',
@@ -169,10 +170,11 @@ export default function Home() {
                 color: '#000000',
                 border: 'none',
                 cursor: 'pointer',
-                boxShadow: '0 10px 30px rgba(0, 255, 136, 0.3)'
+                boxShadow: '0 10px 30px rgba(0, 255, 136, 0.3)',
+                display: 'inline-block'
               }}>
-                Découvrir
-              </button>
+                🔥 Tester l'API
+              </a>
               <button style={{
                 padding: '1rem 2rem',
                 fontSize: '1.1rem',
@@ -292,7 +294,7 @@ export default function Home() {
                   marginBottom: '1rem',
                   color: '#ffffff'
                 }}>
-                  IA Générativ­e
+                  IA Générative
                 </h3>
                 <p style={{
                   color: '#b0b0b0',
@@ -346,6 +348,37 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* TEST SECTION - HACKERNEWS API */}
+        <section id="test" style={{
+          padding: '6rem 2rem',
+          background: '#000000'
+        }}>
+          <div style={{
+            maxWidth: '1200px',
+            margin: '0 auto',
+            textAlign: 'center',
+            marginBottom: '3rem'
+          }}>
+            <h2 style={{
+              fontSize: '3rem',
+              marginBottom: '1rem',
+              background: 'linear-gradient(45deg, #ff6b6b, #ffa500)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
+            }}>
+              🔥 Test Live API
+            </h2>
+            <p style={{
+              color: '#b0b0b0',
+              fontSize: '1.2rem'
+            }}>
+              Démonstration en temps réel de l'agrégation HackerNews
+            </p>
+          </div>
+
+          <SimpleTest />
         </section>
 
         {/* Stats Section */}
