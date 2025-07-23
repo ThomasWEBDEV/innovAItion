@@ -173,7 +173,7 @@ export default function Home() {
                 boxShadow: '0 10px 30px rgba(0, 255, 136, 0.3)',
                 display: 'inline-block'
               }}>
-                🔥 Tester l'API
+                Tester l'API
               </a>
               <button style={{
                 padding: '1rem 2rem',
@@ -222,8 +222,8 @@ export default function Home() {
               gap: '2rem'
             }}>
               <div style={{
-                background: 'rgba(255, 255, 255, 0.05)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
+                background: 'linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%)',
+                border: '1px solid rgba(100, 116, 139, 0.3)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)',
                 borderRadius: '20px',
                 padding: '2rem',
                 backdropFilter: 'blur(10px)',
@@ -237,7 +237,7 @@ export default function Home() {
                   left: 0,
                   right: 0,
                   height: '2px',
-                  background: 'linear-gradient(90deg, #00ff88, #00ccff)'
+                  background: 'linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6)'
                 }} />
                 <div style={{
                   fontSize: '3rem',
@@ -245,7 +245,7 @@ export default function Home() {
                   color: '#00ff88',
                   textShadow: '0 0 20px rgba(0, 255, 136, 0.5)'
                 }}>
-                  ⚡
+
                 </div>
                 <h3 style={{
                   fontSize: '1.5rem',
@@ -264,8 +264,8 @@ export default function Home() {
               </div>
 
               <div style={{
-                background: 'rgba(255, 255, 255, 0.05)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
+                background: 'linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%)',
+                border: '1px solid rgba(100, 116, 139, 0.3)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)',
                 borderRadius: '20px',
                 padding: '2rem',
                 backdropFilter: 'blur(10px)',
@@ -279,7 +279,7 @@ export default function Home() {
                   left: 0,
                   right: 0,
                   height: '2px',
-                  background: 'linear-gradient(90deg, #00ff88, #00ccff)'
+                  background: 'linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6)'
                 }} />
                 <div style={{
                   fontSize: '3rem',
@@ -287,7 +287,7 @@ export default function Home() {
                   color: '#00ff88',
                   textShadow: '0 0 20px rgba(0, 255, 136, 0.5)'
                 }}>
-                  🤖
+
                 </div>
                 <h3 style={{
                   fontSize: '1.5rem',
@@ -306,8 +306,8 @@ export default function Home() {
               </div>
 
               <div style={{
-                background: 'rgba(255, 255, 255, 0.05)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
+                background: 'linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%)',
+                border: '1px solid rgba(100, 116, 139, 0.3)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)',
                 borderRadius: '20px',
                 padding: '2rem',
                 backdropFilter: 'blur(10px)',
@@ -321,7 +321,7 @@ export default function Home() {
                   left: 0,
                   right: 0,
                   height: '2px',
-                  background: 'linear-gradient(90deg, #00ff88, #00ccff)'
+                  background: 'linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6)'
                 }} />
                 <div style={{
                   fontSize: '3rem',
@@ -329,7 +329,7 @@ export default function Home() {
                   color: '#00ff88',
                   textShadow: '0 0 20px rgba(0, 255, 136, 0.5)'
                 }}>
-                  🎯
+
                 </div>
                 <h3 style={{
                   fontSize: '1.5rem',
@@ -368,7 +368,7 @@ export default function Home() {
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}>
-              🔥 Test Live API
+              Test Live API
             </h2>
             <p style={{
               color: '#b0b0b0',
@@ -398,7 +398,7 @@ export default function Home() {
               padding: '2rem',
               background: 'rgba(255, 255, 255, 0.03)',
               borderRadius: '15px',
-              border: '1px solid rgba(255, 255, 255, 0.1)'
+              border: '1px solid rgba(100, 116, 139, 0.3)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)'
             }}>
               <div style={{
                 fontSize: '3rem',
@@ -422,7 +422,7 @@ export default function Home() {
               padding: '2rem',
               background: 'rgba(255, 255, 255, 0.03)',
               borderRadius: '15px',
-              border: '1px solid rgba(255, 255, 255, 0.1)'
+              border: '1px solid rgba(100, 116, 139, 0.3)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)'
             }}>
               <div style={{
                 fontSize: '3rem',
@@ -446,7 +446,7 @@ export default function Home() {
               padding: '2rem',
               background: 'rgba(255, 255, 255, 0.03)',
               borderRadius: '15px',
-              border: '1px solid rgba(255, 255, 255, 0.1)'
+              border: '1px solid rgba(100, 116, 139, 0.3)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)'
             }}>
               <div style={{
                 fontSize: '3rem',
@@ -470,7 +470,7 @@ export default function Home() {
               padding: '2rem',
               background: 'rgba(255, 255, 255, 0.03)',
               borderRadius: '15px',
-              border: '1px solid rgba(255, 255, 255, 0.1)'
+              border: '1px solid rgba(100, 116, 139, 0.3)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)'
             }}>
               <div style={{
                 fontSize: '3rem',

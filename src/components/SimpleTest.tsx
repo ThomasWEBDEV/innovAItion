@@ -270,7 +270,7 @@ export default function SimpleTest() {
                         title="Générer un résumé IA de cet article"
                         className="bg-purple-500 hover:bg-purple-600 text-white px-2 py-1 rounded text-xs font-medium disabled:opacity-50 transition-colors  transform"
                       >
-                        {singleSummaryLoading === article.id ? 'PROC' : 'AI ANALYZE'}
+                        {singleSummaryLoading === article.id ? 'PROC' : '🤖 AI ANALYZE'}
                       </button>
                     )}
                   </div>
