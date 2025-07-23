@@ -1,0 +1,20 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+
+interface Article {
+  id: string;
+  title: string;
+  url: string;
+  score?: number;
+  source: string;
+  created_at: string;
+  summary?: string;
+}
+
+export default function SimpleTest() {
+  const [articles, setArticles] = useState<Article[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [summaryLoading, setSummaryLoading] = useState(false);
+  const [singleSummaryLoading, setSingleSummaryLoading] = useState<string | null>(null);
+  const [clearLoading, setClearLoading] = useState(false);

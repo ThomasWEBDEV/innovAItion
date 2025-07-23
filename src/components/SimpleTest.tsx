@@ -18,6 +18,13 @@ export default function SimpleTest() {
   const [summaryLoading, setSummaryLoading] = useState(false);
   const [singleSummaryLoading, setSingleSummaryLoading] = useState<string | null>(null);
   const [clearLoading, setClearLoading] = useState(false);
+
+  // Stats calculées automatiquement
+  const stats = {
+    total: articles.length,
+    withSummary: articles.filter(a => a.summary && a.summary.trim() !== "").length,
+    withoutSummary: articles.filter(a => !a.summary || a.summary.trim() === "").length
+  };
   const [message, setMessage] = useState('');
 
   const fetchAllArticles = async () => {
@@ -144,6 +151,22 @@ export default function SimpleTest() {
 
   return (
     <div className="container mx-auto p-6 max-w-6xl">
+
+        {/* Dashboard Stats */}
+        <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-gray-50 rounded-lg">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-blue-600">{stats.total}</div>
+            <div className="text-sm text-gray-600">Total articles</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-green-600">{stats.withSummary}</div>
+            <div className="text-sm text-gray-600">Avec résumés IA</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-orange-600">{stats.withoutSummary}</div>
+            <div className="text-sm text-gray-600">Sans résumés</div>
+          </div>
+        </div>
       <div className="bg-white rounded-lg shadow-lg p-6">
         <h1 className="text-3xl font-bold text-gray-800 mb-6">
           🚀 InnovAItion - Agrégateur Tech + IA
