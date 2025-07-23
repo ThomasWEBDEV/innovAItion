@@ -33,7 +33,7 @@ export default function SimpleTest() {
       const response = await fetch('/api/all-articles');
       const data = await response.json();
       setArticles(data.articles || []);
-      setMessage(`📊 ${data.articles?.length || 0} articles chargés`);
+      setMessage(`DATA SYNC COMPLETE: ${data.articles?.length || 0} nodes loaded`);
     } catch (error) {
       setMessage('❌ Erreur chargement articles');
       console.error('Erreur:', error);
@@ -78,7 +78,7 @@ export default function SimpleTest() {
 
   const generateSummaries = async () => {
     setSummaryLoading(true);
-    setMessage('🤖 Génération des résumés IA...');
+    setMessage('AI PROCESSING INITIATED...');
     try {
       const response = await fetch('/api/generate-summaries', { method: 'POST' });
       const data = await response.json();
@@ -203,7 +203,7 @@ export default function SimpleTest() {
             disabled={summaryLoading || articlesWithoutSummary.length === 0}
             className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg font-medium disabled:opacity-50 transition-colors"
           >
-            {summaryLoading ? '🤖 Génération...' : `🤖 Générer résumés (${articlesWithoutSummary.length})`}
+            {summaryLoading ? 'AI PROCESSING...' : `PROCESS AI BATCH (${articlesWithoutSummary.length})`}
           </button>
 
           <button
@@ -270,7 +270,7 @@ export default function SimpleTest() {
                         title="Générer un résumé IA de cet article"
                         className="bg-purple-500 hover:bg-purple-600 text-white px-2 py-1 rounded text-xs font-medium disabled:opacity-50 transition-colors  transform"
                       >
-                        {singleSummaryLoading === article.id ? '⏳' : '🤖 Résumer'}
+                        {singleSummaryLoading === article.id ? 'PROC' : 'AI ANALYZE'}
                       </button>
                     )}
                   </div>
@@ -280,7 +280,7 @@ export default function SimpleTest() {
                 {article.summary && (
                   <div className="bg-purple-50 border-l-4 border-purple-400 p-3 mt-3">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-purple-600 font-medium text-sm">🤖 Résumé IA</span>
+                      <span className="text-purple-600 font-medium text-sm">AI ANALYSIS</span>
                     </div>
                     <p className="text-gray-700 italic">{article.summary}</p>
                   </div>
