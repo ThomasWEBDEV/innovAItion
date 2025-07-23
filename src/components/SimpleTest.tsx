@@ -156,20 +156,20 @@ export default function SimpleTest() {
         <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-gray-50 rounded-lg">
           <div className="text-center">
             <div className="text-2xl font-bold text-blue-600">{stats.total}</div>
-            <div className="text-sm text-gray-600">Total articles</div>
+            <div className="text-sm text-gray-600">DATA NODES</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-green-600">{stats.withSummary}</div>
-            <div className="text-sm text-gray-600">Avec résumés IA</div>
+            <div className="text-sm text-gray-600">AI PROCESSED</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-orange-600">{stats.withoutSummary}</div>
-            <div className="text-sm text-gray-600">Sans résumés</div>
+            <div className="text-sm text-gray-600">RAW DATA</div>
           </div>
         </div>
       <div className="bg-white rounded-lg shadow-lg p-6">
-        <h1 className="text-3xl font-bold text-gray-800 mb-6">
-          🚀 InnovAItion - Agrégateur Tech + IA
+        <h1 className="text-4xl font-black bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent tracking-tight mb-6">
+          InnovAItion Neural Feed
         </h1>
 
         {/* Boutons de contrôle */}
@@ -177,25 +177,25 @@ export default function SimpleTest() {
           <button
             onClick={fetchHackerNews}
             disabled={loading}
-            className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-medium disabled:opacity-50 transition-colors"
+            className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 shadow-lg hover:shadow-xl text-white px-4 py-2 rounded-lg font-medium disabled:opacity-50 transition-colors"
           >
-            🔥 HackerNews
+            HACKER PULSE
           </button>
 
           <button
             onClick={fetchFrenchSources}
             disabled={loading}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium disabled:opacity-50 transition-colors"
+            className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl text-white px-4 py-2 rounded-lg font-medium disabled:opacity-50 transition-colors"
           >
-            🇫🇷 Sources FR
+            NEURAL SOURCES
           </button>
 
           <button
             onClick={fetchAllArticles}
             disabled={loading}
-            className="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg font-medium disabled:opacity-50 transition-colors"
+            className="bg-gradient-to-r from-gray-600 to-gray-800 hover:from-gray-700 hover:to-gray-900 shadow-lg hover:shadow-xl text-white px-4 py-2 rounded-lg font-medium disabled:opacity-50 transition-colors"
           >
-            🔄 Recharger
+            SYNC DATA
           </button>
 
           <button
@@ -219,15 +219,15 @@ export default function SimpleTest() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           <div className="bg-blue-50 p-4 rounded-lg">
             <div className="text-2xl font-bold text-blue-600">{articles.length}</div>
-            <div className="text-blue-600">Total articles</div>
+            <div className="text-blue-600">DATA NODES</div>
           </div>
           <div className="bg-green-50 p-4 rounded-lg">
             <div className="text-2xl font-bold text-green-600">{articlesWithSummary.length}</div>
-            <div className="text-green-600">Avec résumés IA</div>
+            <div className="text-green-600">AI PROCESSED</div>
           </div>
           <div className="bg-orange-50 p-4 rounded-lg">
             <div className="text-2xl font-bold text-orange-600">{articlesWithoutSummary.length}</div>
-            <div className="text-orange-600">Sans résumés</div>
+            <div className="text-orange-600">RAW DATA</div>
           </div>
         </div>
 
@@ -242,13 +242,13 @@ export default function SimpleTest() {
         <div className="space-y-4">
           {articles.length > 0 ? (
             articles.map((article) => (
-              <div key={article.id} className="border border-gray-200 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-shadow">
+              <div key={article.id} className="border border-gray-200 rounded-lg p-4 hover:shadow-lg  transition-shadow">
                 <div className="flex justify-between items-start mb-2">
                   <a
                     href={article.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-lg font-semibold text-blue-600 hover:text-blue-800 transition-colors flex-1 mr-4"
+                    className="text-lg font-semibold text-blue-600 hover:text-blue-800 transition-colors flex-1 mr-4 truncate break-words overflow-hidden"
                   >
                     {article.title}
                   </a>
@@ -268,7 +268,7 @@ export default function SimpleTest() {
                         onClick={() => generateSingleSummary(article.id)}
                         disabled={singleSummaryLoading === article.id}
                         title="Générer un résumé IA de cet article"
-                        className="bg-purple-500 hover:bg-purple-600 text-white px-2 py-1 rounded text-xs font-medium disabled:opacity-50 transition-colors hover:scale-105 transform"
+                        className="bg-purple-500 hover:bg-purple-600 text-white px-2 py-1 rounded text-xs font-medium disabled:opacity-50 transition-colors  transform"
                       >
                         {singleSummaryLoading === article.id ? '⏳' : '🤖 Résumer'}
                       </button>
