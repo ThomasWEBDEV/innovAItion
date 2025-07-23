@@ -1,7 +1,4 @@
 {
   "/api/all-articles/route": "app/api/all-articles/route.js",
-  "/api/clear-articles/route": "app/api/clear-articles/route.js",
-  "/api/fetch-reliable-french/route": "app/api/fetch-reliable-french/route.js",
-  "/api/fetch-hackernews/route": "app/api/fetch-hackernews/route.js",
   "/page": "app/page.js"
 }

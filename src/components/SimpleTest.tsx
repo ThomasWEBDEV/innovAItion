@@ -242,7 +242,7 @@ export default function SimpleTest() {
         <div className="space-y-4">
           {articles.length > 0 ? (
             articles.map((article) => (
-              <div key={article.id} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+              <div key={article.id} className="border border-gray-200 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-shadow">
                 <div className="flex justify-between items-start mb-2">
                   <a
                     href={article.url}

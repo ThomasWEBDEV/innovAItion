@@ -15,21 +15,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/api/all-articles/route.js"
-    ],
-    "/api/clear-articles/route": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/api/clear-articles/route.js"
-    ],
-    "/api/fetch-reliable-french/route": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/api/fetch-reliable-french/route.js"
-    ],
-    "/api/fetch-hackernews/route": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/api/fetch-hackernews/route.js"
     ]
   }
 }
