@@ -23,7 +23,7 @@ export default function SimpleTest() {
   const fetchAllArticles = async () => {
     setLoading(true);
     try {
-      const response = await fetch('/api/articles');
+      const response = await fetch('/api/all-articles');
       const data = await response.json();
       setArticles(data.articles || []);
       setMessage(`✅ ${data.articles?.length || 0} articles chargés`);
@@ -39,9 +39,19 @@ export default function SimpleTest() {
     setMessage('🔄 Récupération HackerNews...');
     try {
       const response = await fetch('/api/fetch-hackernews', { method: 'POST' });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
       const data = await response.json();
-      setMessage(`🟠 ${data.count} articles HackerNews ajoutés`);
-      await fetchAllArticles();
+
+      if (data.success) {
+        setMessage(`🟠 ${data.count} nouveaux articles HackerNews ajoutés`);
+        await fetchAllArticles();
+      } else {
+        setMessage(`❌ ${data.error || 'Erreur inconnue'}`);
+      }
     } catch (error) {
       setMessage('❌ Erreur HackerNews');
       console.error('Erreur:', error);
@@ -53,7 +63,7 @@ export default function SimpleTest() {
     setLoading(true);
     setMessage('🔄 Récupération sources FR...');
     try {
-      const response = await fetch('/api/fetch-french-sources', { method: 'POST' });
+      const response = await fetch('/api/fetch-reliable-french', { method: 'POST' });
       const data = await response.json();
 
       if (!response.ok) {
