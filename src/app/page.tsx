@@ -64,13 +64,26 @@ export default function Home() {
               }}>
                 Test API
               </a>
-              <a href="#" style={{
+              <a href="#about" style={{
                 color: '#ffffff',
                 textDecoration: 'none',
                 transition: 'all 0.3s ease',
-                position: 'relative'
+                position: 'relative',
+                padding: '0.5rem 1rem',
+                borderRadius: '8px',
+                overflow: 'hidden'
               }}>
                 À propos
+                <span style={{
+                  position: 'absolute',
+                  bottom: '0.2rem',
+                  left: '50%',
+                  width: '0%',
+                  height: '2px',
+                  background: 'linear-gradient(90deg, #00ff88, #00ccff)',
+                  transition: 'all 0.3s ease',
+                  transform: 'translateX(-50%)'
+                }} />
               </a>
               <a href="#" style={{
                 color: '#ffffff',
@@ -605,6 +618,18 @@ export default function Home() {
 
         nav a:hover::after {
           width: 100%;
+        }
+
+        nav a[href="#about"]:hover {
+          color: #00ff88 !important;
+          text-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
+          background: rgba(0, 255, 136, 0.1) !important;
+          transform: translateY(-2px);
+        }
+
+        nav a[href="#about"]:hover span {
+          width: 100% !important;
+          box-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
         }
 
         button:hover {
