@@ -8,3 +8,5 @@ dist/
 .next/
 .next/
 package-lock.json
+.next/
+yarn.lock
