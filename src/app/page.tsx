@@ -64,7 +64,7 @@ export default function Home() {
               }}>
                 Test API
               </a>
-              <a href="#about" style={{
+              <a href="/about" style={{
                 color: '#ffffff',
                 textDecoration: 'none',
                 transition: 'all 0.3s ease',
@@ -620,14 +620,14 @@ export default function Home() {
           width: 100%;
         }
 
-        nav a[href="#about"]:hover {
+        nav a[href="/about"]:hover {
           color: #00ff88 !important;
           text-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
           background: rgba(0, 255, 136, 0.1) !important;
           transform: translateY(-2px);
         }
 
-        nav a[href="#about"]:hover span {
+        nav a[href="/about"]:hover span {
           width: 100% !important;
           box-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
         }
