@@ -85,7 +85,7 @@ export default function Home() {
                   transform: 'translateX(-50%)'
                 }} />
               </a>
-              <a href="#" style={{
+              <a href="/contact" style={{
                 color: '#ffffff',
                 textDecoration: 'none',
                 transition: 'all 0.3s ease',
@@ -188,7 +188,7 @@ export default function Home() {
               }}>
                 Tester l'API
               </a>
-              <button style={{
+              <a href="/contact" style={{
                 padding: '1rem 2rem',
                 fontSize: '1.1rem',
                 fontWeight: '600',
@@ -201,10 +201,11 @@ export default function Home() {
                 color: '#ffffff',
                 border: '2px solid rgba(255, 255, 255, 0.3)',
                 cursor: 'pointer',
-                backdropFilter: 'blur(10px)'
+                backdropFilter: 'blur(10px)',
+                display: 'inline-block'
               }}>
-                En savoir plus
-              </button>
+                Me Contacter
+              </a>
             </div>
           </div>
         </section>
@@ -258,7 +259,7 @@ export default function Home() {
                   color: '#00ff88',
                   textShadow: '0 0 20px rgba(0, 255, 136, 0.5)'
                 }}>
-
+                  ⚡
                 </div>
                 <h3 style={{
                   fontSize: '1.5rem',
@@ -300,7 +301,7 @@ export default function Home() {
                   color: '#00ff88',
                   textShadow: '0 0 20px rgba(0, 255, 136, 0.5)'
                 }}>
-
+                  🧠
                 </div>
                 <h3 style={{
                   fontSize: '1.5rem',
@@ -342,7 +343,7 @@ export default function Home() {
                   color: '#00ff88',
                   textShadow: '0 0 20px rgba(0, 255, 136, 0.5)'
                 }}>
-
+                  🎯
                 </div>
                 <h3 style={{
                   fontSize: '1.5rem',
@@ -553,21 +554,21 @@ export default function Home() {
               gap: '1rem',
               marginTop: '1rem'
             }}>
-              <a href="#" style={{
-                color: '#666666',
-                fontSize: '1.5rem',
-                transition: 'all 0.3s ease'
-              }}>🐦</a>
-              <a href="#" style={{
-                color: '#666666',
-                fontSize: '1.5rem',
-                transition: 'all 0.3s ease'
-              }}>💼</a>
-              <a href="#" style={{
+              <a href="https://github.com/ThomasWEBDEV" target="_blank" style={{
                 color: '#666666',
                 fontSize: '1.5rem',
                 transition: 'all 0.3s ease'
               }}>🐙</a>
+              <a href="https://www.linkedin.com/in/thomas-feret-dev/" target="_blank" style={{
+                color: '#666666',
+                fontSize: '1.5rem',
+                transition: 'all 0.3s ease'
+              }}>💼</a>
+              <a href="/contact" style={{
+                color: '#666666',
+                fontSize: '1.5rem',
+                transition: 'all 0.3s ease'
+              }}>📧</a>
             </div>
           </div>
         </footer>
@@ -632,7 +633,7 @@ export default function Home() {
           box-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
         }
 
-        button:hover {
+        button:hover, a[href="#test"]:hover, a[href="/contact"]:hover {
           transform: translateY(-5px) !important;
           box-shadow: 0 15px 40px rgba(0, 255, 136, 0.5) !important;
         }
