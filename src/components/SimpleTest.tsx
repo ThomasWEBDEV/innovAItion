@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface Article {
   id: string;
@@ -19,6 +19,8 @@ export default function SimpleTest() {
   const [singleSummaryLoading, setSingleSummaryLoading] = useState<string | null>(null);
   const [clearLoading, setClearLoading] = useState(false);
   const [message, setMessage] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredArticles, setFilteredArticles] = useState<Article[]>([]);
 
   const fetchAllArticles = async () => {
     setLoading(true);
@@ -145,6 +147,26 @@ export default function SimpleTest() {
     setClearLoading(false);
   };
 
+  // Fonction de recherche
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+    if (query.trim() === '') {
+      setFilteredArticles(articles);
+    } else {
+      const filtered = articles.filter(article =>
+        article.title.toLowerCase().includes(query.toLowerCase()) ||
+        article.summary?.toLowerCase().includes(query.toLowerCase()) ||
+        article.source.toLowerCase().includes(query.toLowerCase())
+      );
+      setFilteredArticles(filtered);
+    }
+  };
+
+  // Mettre à jour les articles filtrés quand les articles changent
+  useEffect(() => {
+    handleSearch(searchQuery);
+  }, [articles]);
+
   // Statistiques
   const articlesWithSummary = articles.filter(a => a.summary);
   const articlesWithoutSummary = articles.filter(a => !a.summary);
@@ -154,6 +176,39 @@ export default function SimpleTest() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">🚀 Agrégateur Tech News</h1>
         <p className="text-gray-600">Interface de test pour l'agrégation d'actualités tech avec résumés IA</p>
+      </div>
+
+      {/* Barre de recherche */}
+      <div className="mb-6">
+        <div className="relative max-w-xl mx-auto">
+          <input
+            type="text"
+            placeholder="🔍 Rechercher dans les articles..."
+            value={searchQuery}
+            onChange={(e) => handleSearch(e.target.value)}
+            className="w-full px-6 py-3 pl-12 bg-gray-50 border-2 border-gray-200 rounded-full
+                     focus:border-purple-500 focus:bg-white focus:outline-none transition-all
+                     text-gray-700 placeholder-gray-400"
+          />
+          <div className="absolute left-4 top-1/2 -translate-y-1/2">
+            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          {searchQuery && (
+            <button
+              onClick={() => handleSearch('')}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+            >
+              ✕
+            </button>
+          )}
+        </div>
+        {searchQuery && (
+          <p className="text-center mt-2 text-sm text-gray-500">
+            {filteredArticles.length} résultat{filteredArticles.length > 1 ? 's' : ''} trouvé{filteredArticles.length > 1 ? 's' : ''}
+          </p>
+        )}
       </div>
 
       {/* Boutons d'action */}
@@ -231,8 +286,8 @@ export default function SimpleTest() {
 
       {/* Liste des articles améliorée */}
       <div className="space-y-4">
-        {articles.length > 0 ? (
-          articles.map((article, index) => (
+        {filteredArticles.length > 0 ? (
+          filteredArticles.map((article, index) => (
             <div
               key={article.id}
               className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 bg-gradient-to-r from-white to-gray-50"
@@ -295,11 +350,13 @@ export default function SimpleTest() {
               </div>
             </div>
           ))
-        ) : (
+          ) : (
           <div className="text-center py-12 text-gray-500 bg-gray-50 rounded-xl">
             <div className="text-6xl mb-4">📰</div>
-            <p className="text-lg">Aucun article trouvé.</p>
-            <p>Utilisez les boutons ci-dessus pour charger des articles.</p>
+            <p className="text-lg">
+              {searchQuery ? `Aucun article trouvé pour "${searchQuery}"` : 'Aucun article trouvé.'}
+            </p>
+            {!searchQuery && <p>Utilisez les boutons ci-dessus pour charger des articles.</p>}
           </div>
         )}
       </div>
