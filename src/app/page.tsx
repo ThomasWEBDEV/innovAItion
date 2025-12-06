@@ -1,6 +1,5 @@
 'use client'
 
-import SupabaseTest from '../components/SupabaseTest'
 import SimpleTest from '@/components/SimpleTest'
 
 export default function Home() {
@@ -56,13 +55,13 @@ export default function Home() {
               }}>
                 Accueil
               </a>
-              <a href="#test" style={{
+              <a href="#actualites" style={{
                 color: '#ffffff',
                 textDecoration: 'none',
                 transition: 'all 0.3s ease',
                 position: 'relative'
               }}>
-                Test API
+                Actualités
               </a>
               <a href="/about" style={{
                 color: '#ffffff',
@@ -170,7 +169,7 @@ export default function Home() {
               animation: 'fadeInUp 1s ease-out 1s both',
               flexWrap: 'wrap'
             }}>
-              <a href="#test" style={{
+              <a href="#actualites" style={{
                 padding: '1rem 2rem',
                 fontSize: '1.1rem',
                 fontWeight: '600',
@@ -186,7 +185,7 @@ export default function Home() {
                 boxShadow: '0 10px 30px rgba(0, 255, 136, 0.3)',
                 display: 'inline-block'
               }}>
-                Tester l'API
+                Voir les Actualités
               </a>
               <a href="/contact" style={{
                 padding: '1rem 2rem',
@@ -237,7 +236,8 @@ export default function Home() {
             }}>
               <div style={{
                 background: 'linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%)',
-                border: '1px solid rgba(100, 116, 139, 0.3)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)',
+                border: '1px solid rgba(100, 116, 139, 0.3)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)',
                 borderRadius: '20px',
                 padding: '2rem',
                 backdropFilter: 'blur(10px)',
@@ -279,7 +279,8 @@ export default function Home() {
 
               <div style={{
                 background: 'linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%)',
-                border: '1px solid rgba(100, 116, 139, 0.3)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)',
+                border: '1px solid rgba(100, 116, 139, 0.3)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)',
                 borderRadius: '20px',
                 padding: '2rem',
                 backdropFilter: 'blur(10px)',
@@ -321,7 +322,8 @@ export default function Home() {
 
               <div style={{
                 background: 'linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%)',
-                border: '1px solid rgba(100, 116, 139, 0.3)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)',
+                border: '1px solid rgba(100, 116, 139, 0.3)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)',
                 borderRadius: '20px',
                 padding: '2rem',
                 backdropFilter: 'blur(10px)',
@@ -364,35 +366,41 @@ export default function Home() {
           </div>
         </section>
 
-        {/* TEST SECTION - HACKERNEWS API */}
-        <section id="test" style={{
-          padding: '6rem 2rem',
+        {/* SECTION ACTUALITÉS - FONCTIONNALITÉ PRINCIPALE */}
+        <section id="actualites" style={{
+          padding: '8rem 2rem',
           background: '#000000'
         }}>
           <div style={{
-            maxWidth: '1200px',
-            margin: '0 auto',
-            textAlign: 'center',
-            marginBottom: '3rem'
+            maxWidth: '1400px',
+            margin: '0 auto'
           }}>
-            <h2 style={{
-              fontSize: '3rem',
-              marginBottom: '1rem',
-              background: 'linear-gradient(45deg, #ff6b6b, #ffa500)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
+            <div style={{
+              textAlign: 'center',
+              marginBottom: '4rem'
             }}>
-              Test Live API
-            </h2>
-            <p style={{
-              color: '#b0b0b0',
-              fontSize: '1.2rem'
-            }}>
-              Démonstration en temps réel de l'agrégation HackerNews
-            </p>
-          </div>
+              <h2 style={{
+                fontSize: '3rem',
+                marginBottom: '1rem',
+                background: 'linear-gradient(45deg, #00ff88, #00ccff)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                fontWeight: '900'
+              }}>
+                Actualités Tech & IA
+              </h2>
+              <p style={{
+                color: '#b0b0b0',
+                fontSize: '1.2rem',
+                maxWidth: '600px',
+                margin: '0 auto'
+              }}>
+                Agrégation automatique des dernières nouvelles tech avec analyse et résumés IA
+              </p>
+            </div>
 
-          <SimpleTest />
+            <SimpleTest />
+          </div>
         </section>
 
         {/* Stats Section */}
@@ -412,7 +420,8 @@ export default function Home() {
               padding: '2rem',
               background: 'rgba(255, 255, 255, 0.03)',
               borderRadius: '15px',
-              border: '1px solid rgba(100, 116, 139, 0.3)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)'
+              border: '1px solid rgba(100, 116, 139, 0.3)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)'
             }}>
               <div style={{
                 fontSize: '3rem',
@@ -436,7 +445,8 @@ export default function Home() {
               padding: '2rem',
               background: 'rgba(255, 255, 255, 0.03)',
               borderRadius: '15px',
-              border: '1px solid rgba(100, 116, 139, 0.3)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)'
+              border: '1px solid rgba(100, 116, 139, 0.3)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)'
             }}>
               <div style={{
                 fontSize: '3rem',
@@ -460,7 +470,8 @@ export default function Home() {
               padding: '2rem',
               background: 'rgba(255, 255, 255, 0.03)',
               borderRadius: '15px',
-              border: '1px solid rgba(100, 116, 139, 0.3)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)'
+              border: '1px solid rgba(100, 116, 139, 0.3)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)'
             }}>
               <div style={{
                 fontSize: '3rem',
@@ -484,7 +495,8 @@ export default function Home() {
               padding: '2rem',
               background: 'rgba(255, 255, 255, 0.03)',
               borderRadius: '15px',
-              border: '1px solid rgba(100, 116, 139, 0.3)', boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)'
+              border: '1px solid rgba(100, 116, 139, 0.3)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 163, 184, 0.1)'
             }}>
               <div style={{
                 fontSize: '3rem',
@@ -502,32 +514,6 @@ export default function Home() {
                 Monitoring
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Status Tests */}
-        <section style={{
-          padding: '4rem 2rem',
-          background: '#000000'
-        }}>
-          <div style={{
-            maxWidth: '500px',
-            margin: '0 auto',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '1rem'
-          }}>
-            <div style={{
-              background: 'rgba(34, 197, 94, 0.2)',
-              border: '1px solid rgba(34, 197, 94, 0.3)',
-              color: '#4ade80',
-              padding: '12px 16px',
-              borderRadius: '8px',
-              textAlign: 'center'
-            }}>
-              ✅ Docker Setup Réussi !
-            </div>
-            <SupabaseTest />
           </div>
         </section>
 
@@ -633,19 +619,19 @@ export default function Home() {
           box-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
         }
 
-        button:hover, a[href="#test"]:hover, a[href="/contact"]:hover {
+        a[href="#actualites"]:hover, a[href="/contact"]:hover {
           transform: translateY(-5px) !important;
           box-shadow: 0 15px 40px rgba(0, 255, 136, 0.5) !important;
         }
 
-        [style*="background: rgba(255, 255, 255, 0.05)"]:hover {
+        [style*="background: linear-gradient(135deg, #1e293b"]:hover {
           transform: translateY(-10px);
           box-shadow: 0 20px 50px rgba(0, 255, 136, 0.2);
           border-color: rgba(0, 255, 136, 0.3) !important;
         }
 
         @media (max-width: 768px) {
-          nav ul {
+          nav > div > div:last-child {
             display: none;
           }
 
