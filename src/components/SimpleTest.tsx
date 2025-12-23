@@ -173,6 +173,36 @@ export default function SimpleTest() {
 
   return (
     <div className="max-w-6xl mx-auto p-6 bg-white rounded-xl shadow-lg">
+      {/* Guide d'utilisation */}
+      <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl p-6 mb-6 text-white">
+        <h2 className="text-2xl font-bold mb-3 flex items-center gap-2">
+          <span>💡</span> Comment utiliser l'agrégateur ?
+        </h2>
+        <div className="grid gap-3 text-sm">
+          <div className="flex items-start gap-3">
+            <span className="text-2xl">1️⃣</span>
+            <div>
+              <strong className="block">Charger les articles</strong>
+              Cliquez sur <strong>🟠 HackerNews</strong> ou <strong>🇫🇷 Sources FR</strong> pour récupérer les dernières actualités tech
+            </div>
+          </div>
+          <div className="flex items-start gap-3">
+            <span className="text-2xl">2️⃣</span>
+            <div>
+              <strong className="block">Générer les résumés IA</strong>
+              Cliquez sur <strong>🤖 Générer résumés</strong> pour obtenir des résumés automatiques GPT-4
+            </div>
+          </div>
+          <div className="flex items-start gap-3">
+            <span className="text-2xl">3️⃣</span>
+            <div>
+              <strong className="block">Rechercher</strong>
+              Utilisez la barre de recherche pour filtrer les articles par mots-clés
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">🚀 Agrégateur Tech News</h1>
         <p className="text-gray-600">Interface de test pour l'agrégation d'actualités tech avec résumés IA</p>
@@ -332,11 +362,15 @@ export default function SimpleTest() {
                 </div>
               </div>
 
-              {/* Résumé IA avec style amélioré */}
+              {/* Résumé IA MIS EN VALEUR */}
               {article.summary && (
-                <div className="bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-400 p-4 mt-4 rounded-r-lg">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-purple-600 font-medium text-sm">🤖 Résumé IA</span>
+                <div className="bg-gradient-to-r from-purple-100 via-indigo-100 to-blue-100 border-l-4 border-purple-600 p-5 mt-4 rounded-r-xl shadow-md">
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="flex items-center gap-2 bg-purple-600 text-white px-3 py-1.5 rounded-full text-sm font-bold shadow-sm">
+                      <span>🤖</span>
+                      <span>Résumé IA GPT-4</span>
+                    </div>
+                    <span className="text-purple-600 text-xs font-semibold">✨ Généré automatiquement</span>
                     <div className="w-1 h-1 bg-purple-400 rounded-full"></div>
                     <span className="text-purple-500 text-xs">Généré automatiquement</span>
                   </div>
